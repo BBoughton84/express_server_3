@@ -2,12 +2,12 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 8080
-const cars = require('./routes/types')
+const cars = require('./routes/main.js')
 
 app.use('/cars', cars)
 
 app.use(bodyParser())
-app.use(urlencoded({extended:true}))
+// app.use(bodyParser.urlencoded({extended:true}))
 
 
 app.listen(PORT, function() {
